@@ -1,0 +1,10 @@
+Flask
+Jinja2
+Werkzeug
+certifi
+chardet
+gunicorn
+requests
+flask_restful
+flask
+pymongo
