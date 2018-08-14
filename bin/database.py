@@ -8,7 +8,7 @@ from bson.objectid import ObjectId
 class DataAccess(object):
 
     def __init__(self):
-        mongodb_url = ""
+        mongodb_url = "mongodb://heroku_h5t46r8p:hba6f3a68mco0j9cbst7ps6cjo@ds121282.mlab.com:21282/heroku_h5t46r8p"
         self.mongodb_obj = MongoDB(url=mongodb_url)
 
 
