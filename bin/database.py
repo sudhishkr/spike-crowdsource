@@ -21,10 +21,7 @@ class MongoDB(object):
 
     @staticmethod
     def json_out(results):
-        json_results = []
-        for result in results:
-            json_results.append(result)
-        return ast.literal_eval(json.dumps(json_results, default=json_util.default))
+        return ast.literal_eval(json.dumps(results, default=json_util.default))
 
     ####################
     # COMMENT
@@ -35,7 +32,7 @@ class MongoDB(object):
         return True
 
     def get_review(self, query_filter={}):
-        return ast.literal_eval(json.dumps(self.collection_review.find(query_filter)))
+        return self.json_out(self.collection_review.find(query_filter))
 
     def delete_review(self, query_filter={}):
         query_data = self.get_review(query_filter=query_filter)
