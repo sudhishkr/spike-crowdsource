@@ -23,7 +23,7 @@ class MongoDB(object):
     def json_out(results):
         json_results = []
         for result in results:
-        json_results.append(result)
+            json_results.append(result)
         return ast.literal_eval(json.dumps(json_results, default=json_util.default))
 
     ####################
