@@ -35,7 +35,7 @@ class MongoDB(object):
         return True
 
     def get_review(self, query_filter={}):
-        return self.collection_review.find(query_filter)
+        return ast.literal_eval(json.dumps(self.collection_review.find(query_filter)))
 
     def delete_review(self, query_filter={}):
         query_data = self.get_review(query_filter=query_filter)
