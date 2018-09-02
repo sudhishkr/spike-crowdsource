@@ -26,5 +26,6 @@ def data_comment():
     else:
         return jsonify({"status": "failed"})
 
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(sys.argv[1]), debug=True)
